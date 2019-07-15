@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.dao.EmployeeDAO;
+import com.example.model.Employee;
 
 @RestController
 public class EmployeeController {
@@ -15,7 +16,7 @@ public class EmployeeController {
 	private EmployeeDAO employeeDAO;
 
 	@RequestMapping("/getEmployeeList")
-	public List getEmployeeList() {
+	public List<Employee> getEmployeeList() {
 		return employeeDAO.getEmployeeList();
 	}
 
